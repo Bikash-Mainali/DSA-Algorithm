@@ -14,6 +14,7 @@ public class BST {
     Node root;
 
 
+    // bruteforce
     void insert(int v) {
 
         if (root == null) {
@@ -55,19 +56,19 @@ public class BST {
         return insertUsingRecursion(n, v);
     }
 
-    public Node insertUsingRecursion(Node n, Integer v) {
-        if (n == null) {
+    public Node insertUsingRecursion(Node root, Integer v) {
+        if (root == null) {
             return new Node(v);
         }
         // recur for the left subtree
-        if (v < n.data) {
-            n.left = insertUsingRecursion(n.left, v);
+        if (v < root.data) {
+            root.left = insertUsingRecursion(root.left, v);
         }
         // otherwise, recur for the right subtree
         else {
-            n.right = insertUsingRecursion(n.right, v);
+            root.right = insertUsingRecursion(root.right, v);
         }
-        return n;
+        return root;
     }
 
     public void printTree() {

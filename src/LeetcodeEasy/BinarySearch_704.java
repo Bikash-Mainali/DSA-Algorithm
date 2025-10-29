@@ -30,8 +30,9 @@ public class BinarySearch_704 {
 
     public static void main(String[] args) {
 
-        int arr[] = {2, 3, 4, 10, 40};
-        int x = 10;
-        System.out.println(solution(arr, 0, arr.length - 1, x));
+        int[] arr = {1,2,3,4,5};
+        int x = 2;
+        int resultIndex = solution(arr, 0, arr.length - 1, x);
+        System.out.println("arr[" + resultIndex + "] = " + arr[resultIndex]);
     }
 }
