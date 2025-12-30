@@ -37,7 +37,7 @@ public class L02_BFSTraversal {
 
         while (!queue.isEmpty()) {
             Integer current = queue.poll();
-            System.out.print(current + " ");
+            System.out.print(current+ "--"); // visited vertex
 
             for (Integer neighbor : adjacencyList.getOrDefault(current, new ArrayList<>())) {
                 if (!visited.contains(neighbor)) {
